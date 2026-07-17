@@ -1,0 +1,11 @@
+# Visual Studio / .NET
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.suo
+packages/
+*.dll
+*.pdb
+Thumbs.db
+.DS_Store
