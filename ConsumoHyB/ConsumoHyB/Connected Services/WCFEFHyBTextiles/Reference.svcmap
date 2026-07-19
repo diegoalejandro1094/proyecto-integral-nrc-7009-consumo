@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="cfd6f7d3-14e3-403e-acd9-d5c94965dc36" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53544/WCFHyBTextil.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WCFHyBTextil.xsd" MetadataType="Schema" ID="a450753a-94b9-4068-8df3-225ab411766a" SourceId="1" SourceUrl="http://localhost:53544/WCFHyBTextil.svc?xsd=xsd2" />
+    <MetadataFile FileName="WCFHyBTextil1.xsd" MetadataType="Schema" ID="1d05551c-26f1-4244-aab9-35e9e1e07a50" SourceId="1" SourceUrl="http://localhost:53544/WCFHyBTextil.svc?xsd=xsd1" />
+    <MetadataFile FileName="WCFHyBTextil2.xsd" MetadataType="Schema" ID="d2e6e3ed-bc82-4c21-b40a-f176b4cf90c7" SourceId="1" SourceUrl="http://localhost:53544/WCFHyBTextil.svc?xsd=xsd0" />
+    <MetadataFile FileName="WCFHyBTextil.wsdl" MetadataType="Wsdl" ID="47b72380-96ac-48e5-96dc-69bb65c75228" SourceId="1" SourceUrl="http://localhost:53544/WCFHyBTextil.svc?wsdl" />
+    <MetadataFile FileName="WCFHyBTextil.disco" MetadataType="Disco" ID="a2ef3d8e-22ef-4849-8728-0cd48df04baa" SourceId="1" SourceUrl="http://localhost:53544/WCFHyBTextil.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

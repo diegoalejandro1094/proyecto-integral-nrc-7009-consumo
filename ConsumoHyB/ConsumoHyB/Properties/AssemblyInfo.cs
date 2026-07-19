@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ConsumoHyB")]
+[assembly: AssemblyTitle("ConsumoWS")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ConsumoHyB")]
+[assembly: AssemblyProduct("ConsumoWS")]
 [assembly: AssemblyCopyright("Copyright ©  2026")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("3aef1adf-35db-4670-a766-7bc1a4ea2165")]
+[assembly: Guid("cdc0f96d-a03e-4760-acae-d30f6941818e")]
 
 // Version information for an assembly consists of the following four values:
 //

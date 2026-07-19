@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/pe.com.hyb.bo" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/pe.com.hyb.bo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53544/WCFHyBTextil.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="EntregaBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codPedido" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fecha" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="responsable" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntregaBO" nillable="true" type="tns:EntregaBO" />
+  <xs:complexType name="ArrayOfDocumentoPedidoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentoPedidoBO" nillable="true" type="tns:DocumentoPedidoBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentoPedidoBO" nillable="true" type="tns:ArrayOfDocumentoPedidoBO" />
+  <xs:complexType name="DocumentoPedidoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codPedido" type="xs:int" />
+      <xs:element minOccurs="0" name="codTipoDocumento" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fecha" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numero" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentoPedidoBO" nillable="true" type="tns:DocumentoPedidoBO" />
+  <xs:complexType name="ArrayOfHistorialEstadoPedidoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HistorialEstadoPedidoBO" nillable="true" type="tns:HistorialEstadoPedidoBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistorialEstadoPedidoBO" nillable="true" type="tns:ArrayOfHistorialEstadoPedidoBO" />
+  <xs:complexType name="HistorialEstadoPedidoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codEstado" type="xs:int" />
+      <xs:element minOccurs="0" name="codPedido" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fecha" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistorialEstadoPedidoBO" nillable="true" type="tns:HistorialEstadoPedidoBO" />
+  <xs:complexType name="ArrayOfPagoProveedorBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PagoProveedorBO" nillable="true" type="tns:PagoProveedorBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPagoProveedorBO" nillable="true" type="tns:ArrayOfPagoProveedorBO" />
+  <xs:complexType name="PagoProveedorBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codCompra" type="xs:int" />
+      <xs:element minOccurs="0" name="codMoneda" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fecha" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="monto" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PagoProveedorBO" nillable="true" type="tns:PagoProveedorBO" />
+  <xs:complexType name="ArrayOfCobranzaPedidoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CobranzaPedidoBO" nillable="true" type="tns:CobranzaPedidoBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCobranzaPedidoBO" nillable="true" type="tns:ArrayOfCobranzaPedidoBO" />
+  <xs:complexType name="CobranzaPedidoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codMoneda" type="xs:int" />
+      <xs:element minOccurs="0" name="codPedido" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fecha" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="monto" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CobranzaPedidoBO" nillable="true" type="tns:CobranzaPedidoBO" />
+  <xs:complexType name="ArrayOfMantenimientoMaquinaBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MantenimientoMaquinaBO" nillable="true" type="tns:MantenimientoMaquinaBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMantenimientoMaquinaBO" nillable="true" type="tns:ArrayOfMantenimientoMaquinaBO" />
+  <xs:complexType name="MantenimientoMaquinaBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codMaquina" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="costo" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fecha" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MantenimientoMaquinaBO" nillable="true" type="tns:MantenimientoMaquinaBO" />
+  <xs:complexType name="ArrayOfAsistenciaOperarioBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AsistenciaOperarioBO" nillable="true" type="tns:AsistenciaOperarioBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAsistenciaOperarioBO" nillable="true" type="tns:ArrayOfAsistenciaOperarioBO" />
+  <xs:complexType name="AsistenciaOperarioBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codOperario" type="xs:int" />
+      <xs:element minOccurs="0" name="codTurno" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fecha" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="horaIngreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="horaSalida" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AsistenciaOperarioBO" nillable="true" type="tns:AsistenciaOperarioBO" />
+  <xs:complexType name="ArrayOfTurnoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TurnoBO" nillable="true" type="tns:TurnoBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTurnoBO" nillable="true" type="tns:ArrayOfTurnoBO" />
+  <xs:complexType name="TurnoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="horaFin" type="ser:duration" />
+      <xs:element minOccurs="0" name="horaInicio" type="ser:duration" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TurnoBO" nillable="true" type="tns:TurnoBO" />
+  <xs:complexType name="ArrayOfPermisoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PermisoBO" nillable="true" type="tns:PermisoBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPermisoBO" nillable="true" type="tns:ArrayOfPermisoBO" />
+  <xs:complexType name="PermisoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PermisoBO" nillable="true" type="tns:PermisoBO" />
+  <xs:complexType name="ArrayOfUsuarioBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UsuarioBO" nillable="true" type="tns:UsuarioBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuarioBO" nillable="true" type="tns:ArrayOfUsuarioBO" />
+  <xs:complexType name="UsuarioBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codRol" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UsuarioBO" nillable="true" type="tns:UsuarioBO" />
+  <xs:complexType name="ArrayOfRolPermisoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RolPermisoBO" nillable="true" type="tns:RolPermisoBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRolPermisoBO" nillable="true" type="tns:ArrayOfRolPermisoBO" />
+  <xs:complexType name="RolPermisoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codPermiso" type="xs:int" />
+      <xs:element minOccurs="0" name="codRol" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RolPermisoBO" nillable="true" type="tns:RolPermisoBO" />
+  <xs:complexType name="ArrayOfPedidoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PedidoBO" nillable="true" type="tns:PedidoBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPedidoBO" nillable="true" type="tns:ArrayOfPedidoBO" />
+  <xs:complexType name="PedidoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codCliente" type="xs:int" />
+      <xs:element minOccurs="0" name="codEstado" type="xs:int" />
+      <xs:element minOccurs="0" name="codMoneda" type="xs:int" />
+      <xs:element minOccurs="0" name="codUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fecha" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="total" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PedidoBO" nillable="true" type="tns:PedidoBO" />
+  <xs:complexType name="ArrayOfDetallePedidoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DetallePedidoBO" nillable="true" type="tns:DetallePedidoBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDetallePedidoBO" nillable="true" type="tns:ArrayOfDetallePedidoBO" />
+  <xs:complexType name="DetallePedidoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cantidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="codPedido" type="xs:int" />
+      <xs:element minOccurs="0" name="codTipoTejido" type="xs:int" />
+      <xs:element minOccurs="0" name="codUnidad" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="precio" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetallePedidoBO" nillable="true" type="tns:DetallePedidoBO" />
+  <xs:complexType name="ArrayOfCompraProveedorBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompraProveedorBO" nillable="true" type="tns:CompraProveedorBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompraProveedorBO" nillable="true" type="tns:ArrayOfCompraProveedorBO" />
+  <xs:complexType name="CompraProveedorBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codMoneda" type="xs:int" />
+      <xs:element minOccurs="0" name="codProveedor" type="xs:int" />
+      <xs:element minOccurs="0" name="codUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fecha" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="total" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompraProveedorBO" nillable="true" type="tns:CompraProveedorBO" />
+  <xs:complexType name="ArrayOfDetalleCompraProveedorBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DetalleCompraProveedorBO" nillable="true" type="tns:DetalleCompraProveedorBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDetalleCompraProveedorBO" nillable="true" type="tns:ArrayOfDetalleCompraProveedorBO" />
+  <xs:complexType name="DetalleCompraProveedorBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cantidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="codCompra" type="xs:int" />
+      <xs:element minOccurs="0" name="codTipoHilo" type="xs:int" />
+      <xs:element minOccurs="0" name="codUnidad" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="precio" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetalleCompraProveedorBO" nillable="true" type="tns:DetalleCompraProveedorBO" />
+  <xs:complexType name="ArrayOfIngresoHiloBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IngresoHiloBO" nillable="true" type="tns:IngresoHiloBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIngresoHiloBO" nillable="true" type="tns:ArrayOfIngresoHiloBO" />
+  <xs:complexType name="IngresoHiloBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cantidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="codAlmacen" type="xs:int" />
+      <xs:element minOccurs="0" name="codCompra" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="codTipoHilo" type="xs:int" />
+      <xs:element minOccurs="0" name="codUnidad" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fecha" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IngresoHiloBO" nillable="true" type="tns:IngresoHiloBO" />
+  <xs:complexType name="ArrayOfProduccionBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProduccionBO" nillable="true" type="tns:ProduccionBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProduccionBO" nillable="true" type="tns:ArrayOfProduccionBO" />
+  <xs:complexType name="ProduccionBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cantidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="codMaquina" type="xs:int" />
+      <xs:element minOccurs="0" name="codOperario" type="xs:int" />
+      <xs:element minOccurs="0" name="codPedido" type="xs:int" />
+      <xs:element minOccurs="0" name="codTipoTejido" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fecha" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProduccionBO" nillable="true" type="tns:ProduccionBO" />
+  <xs:complexType name="ArrayOfSalidaHiloBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SalidaHiloBO" nillable="true" type="tns:SalidaHiloBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSalidaHiloBO" nillable="true" type="tns:ArrayOfSalidaHiloBO" />
+  <xs:complexType name="SalidaHiloBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cantidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="codProduccion" type="xs:int" />
+      <xs:element minOccurs="0" name="codTipoHilo" type="xs:int" />
+      <xs:element minOccurs="0" name="codUnidad" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fecha" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SalidaHiloBO" nillable="true" type="tns:SalidaHiloBO" />
+  <xs:complexType name="ArrayOfEntregaBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntregaBO" nillable="true" type="tns:EntregaBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntregaBO" nillable="true" type="tns:ArrayOfEntregaBO" />
+  <xs:complexType name="ArrayOfRolBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RolBO" nillable="true" type="tns:RolBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRolBO" nillable="true" type="tns:ArrayOfRolBO" />
+  <xs:complexType name="RolBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RolBO" nillable="true" type="tns:RolBO" />
+  <xs:complexType name="ArrayOfClienteBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClienteBO" nillable="true" type="tns:ClienteBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClienteBO" nillable="true" type="tns:ArrayOfClienteBO" />
+  <xs:complexType name="ClienteBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nombreContacto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="razonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ruc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClienteBO" nillable="true" type="tns:ClienteBO" />
+  <xs:complexType name="ArrayOfProveedorBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProveedorBO" nillable="true" type="tns:ProveedorBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProveedorBO" nillable="true" type="tns:ArrayOfProveedorBO" />
+  <xs:complexType name="ProveedorBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nombreContacto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="razonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ruc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProveedorBO" nillable="true" type="tns:ProveedorBO" />
+  <xs:complexType name="ArrayOfTipoTejidoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TipoTejidoBO" nillable="true" type="tns:TipoTejidoBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTipoTejidoBO" nillable="true" type="tns:ArrayOfTipoTejidoBO" />
+  <xs:complexType name="TipoTejidoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TipoTejidoBO" nillable="true" type="tns:TipoTejidoBO" />
+  <xs:complexType name="ArrayOfTipoHiloBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TipoHiloBO" nillable="true" type="tns:TipoHiloBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTipoHiloBO" nillable="true" type="tns:ArrayOfTipoHiloBO" />
+  <xs:complexType name="TipoHiloBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TipoHiloBO" nillable="true" type="tns:TipoHiloBO" />
+  <xs:complexType name="ArrayOfMaquinaBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MaquinaBO" nillable="true" type="tns:MaquinaBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMaquinaBO" nillable="true" type="tns:ArrayOfMaquinaBO" />
+  <xs:complexType name="MaquinaBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="capacidad" type="xs:decimal" />
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MaquinaBO" nillable="true" type="tns:MaquinaBO" />
+  <xs:complexType name="ArrayOfOperarioBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OperarioBO" nillable="true" type="tns:OperarioBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOperarioBO" nillable="true" type="tns:ArrayOfOperarioBO" />
+  <xs:complexType name="OperarioBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="documento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperarioBO" nillable="true" type="tns:OperarioBO" />
+  <xs:complexType name="ArrayOfEstadoPedidoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EstadoPedidoBO" nillable="true" type="tns:EstadoPedidoBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEstadoPedidoBO" nillable="true" type="tns:ArrayOfEstadoPedidoBO" />
+  <xs:complexType name="EstadoPedidoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EstadoPedidoBO" nillable="true" type="tns:EstadoPedidoBO" />
+  <xs:complexType name="ArrayOfUnidadMedidaBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UnidadMedidaBO" nillable="true" type="tns:UnidadMedidaBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUnidadMedidaBO" nillable="true" type="tns:ArrayOfUnidadMedidaBO" />
+  <xs:complexType name="UnidadMedidaBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="abreviatura" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UnidadMedidaBO" nillable="true" type="tns:UnidadMedidaBO" />
+  <xs:complexType name="ArrayOfMonedaBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MonedaBO" nillable="true" type="tns:MonedaBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMonedaBO" nillable="true" type="tns:ArrayOfMonedaBO" />
+  <xs:complexType name="MonedaBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="simbolo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MonedaBO" nillable="true" type="tns:MonedaBO" />
+  <xs:complexType name="ArrayOfTipoDocumentoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TipoDocumentoBO" nillable="true" type="tns:TipoDocumentoBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTipoDocumentoBO" nillable="true" type="tns:ArrayOfTipoDocumentoBO" />
+  <xs:complexType name="TipoDocumentoBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TipoDocumentoBO" nillable="true" type="tns:TipoDocumentoBO" />
+  <xs:complexType name="ArrayOfAlmacenBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlmacenBO" nillable="true" type="tns:AlmacenBO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlmacenBO" nillable="true" type="tns:ArrayOfAlmacenBO" />
+  <xs:complexType name="AlmacenBO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AlmacenBO" nillable="true" type="tns:AlmacenBO" />
+</xs:schema>
