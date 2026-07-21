@@ -94,7 +94,7 @@
                             <div class="dropdown-menu p-3" style="min-width: 420px;">
                                 <a class="dropdown-item" href="frmPedido.aspx">Pedido</a>
                                 <a class="dropdown-item" href="frmEstadoPedido.aspx">Estado Pedido</a>
-                                <a class="dropdown-item" href="frmHistorialEstado.aspx">Historial Estado</a>
+                                <a class="dropdown-item" href="frmHistorialEstadoPedido.aspx">Historial Estado</a>
                                 <a class="dropdown-item" href="frmDocumentoPedido.aspx">Documento Pedido</a>
                             </div>
                         </li>

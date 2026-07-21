@@ -14,7 +14,7 @@
                 <h1 class="display-5 fw-bold">HyB Textiles</h1>
                 <p class="col-md-8 fs-5">
                     Bienvenido al sistema de gestión de HyB Textiles.
-                    Seleccione una opción del menú para administrar la información.
+                    Seleccione una opción del menú para administrar la información.               
                 </p>
             </div>
         </div>
@@ -27,11 +27,11 @@
                         <h4 class="card-title">Clientes</h4>
                         <p class="card-text">
                             Registrar, actualizar, eliminar y consultar clientes.
+                       
                         </p>
 
                         <a href="frmCliente.aspx"
-                           class="btn btn-primary">
-                            Ir a Clientes
+                            class="btn btn-primary">Ir a Clientes
                         </a>
 
                     </div>
@@ -44,10 +44,12 @@
                         <h4 class="card-title">Productos</h4>
                         <p class="card-text">
                             Administración de productos del sistema.
+                       
                         </p>
 
                         <button class="btn btn-secondary" disabled>
                             Próximamente
+                       
                         </button>
 
                     </div>
@@ -59,11 +61,10 @@
                     <div class="card-body">
                         <h4 class="card-title">Empleados</h4>
                         <p class="card-text">
-                            Gestión de empleados de la empresa.
+                            Gestión de empleados de la empresa.                       
                         </p>
-
                         <button class="btn btn-secondary" disabled>
-                            Próximamente
+                            Próximamente                       
                         </button>
                     </div>
                 </div>
@@ -75,6 +76,7 @@
                 <p class="col-md-8 fs-5">
                     HyB Textiles es una empresa dedicada a la fabricación y comercialización de tejidos industriales, comprometida con ofrecer productos de calidad, innovación y un servicio confiable. 
                     Nuestro objetivo es satisfacer las necesidades de nuestros clientes mediante procesos eficientes y un equipo orientado a la excelencia.
+               
                 </p>
             </div>
         </div>
@@ -84,10 +86,9 @@
                 <p class="col-md-8 fs-5">
                     HyB Textiles se especializa en la fabricación de tejidos industriales de alta calidad. 
                     Este sistema permite gestionar de forma eficiente clientes, productos y procesos operativos de la empresa.
+               
                 </p>
             </div>
         </div>
-
-
     </div>
 </asp:Content>
