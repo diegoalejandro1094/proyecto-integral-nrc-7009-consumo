@@ -24,9 +24,11 @@
             display: flex;
             flex-direction: column;
         }
+
         .container {
             flex: 1;
         }
+
         .body-content {
             min-height: 500px;
             padding: 20px;
@@ -52,139 +54,87 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">HyB Textiles</a>
+                <a class="navbar-brand" href="Inicio.aspx">HyB Textiles</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="Inicio.aspx">Inicio  </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Quienes Somos </a>
-                        </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Mantenimiento Simple </a>
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Configuración </a>
                             <div class="dropdown-menu p-3" style="min-width: 420px;">
                                 <div class="row">
                                     <div class="col-6">
-                                        <a class="dropdown-item" href="#">Rol</a>
-                                        <a class="dropdown-item" href="#">Sexo</a>
-                                        <a class="dropdown-item" href="#">Tipo Documento</a>
-                                        <a class="dropdown-item" href="#">Tipo Comprobante</a>
+                                        <a class="dropdown-item" href="frmRol.aspx">Rol</a>
+                                        <a class="dropdown-item" href="frmUsuario.aspx">Usuario</a>
+                                        <a class="dropdown-item" href="frmPermiso.aspx">Permiso</a>
+                                        <a class="dropdown-item" href="frmRolPermiso.aspx">Rol Permiso</a>
+                                        <a class="dropdown-item" href="frmTipoDocumento.aspx">Tipo Documento</a>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Mantenimiento Cruzado </a>
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Datos Generales </a>
+                            <div class="dropdown-menu p-3" style="min-width: 420px;">
+                                <a class="dropdown-item" href="frmCliente.aspx">Cliente</a>
+                                <a class="dropdown-item" href="frmProveedor.aspx">Proveedor</a>
+                                <a class="dropdown-item" href="frmOperario.aspx">Operario</a>
+                                <a class="dropdown-item" href="frmMoneda.aspx">Moneda</a>
+                                <a class="dropdown-item" href="frmUnidadMedida.aspx">Unidad de Medida</a>
+                                <a class="dropdown-item" href="frmAlmacen.aspx">Almacén</a>
+                                <a class="dropdown-item" href="frmTurno.aspx">Turno</a>
+                                <a class="dropdown-item" href="frmTipoHilo.aspx">Tipo Hilo</a>
+                                <a class="dropdown-item" href="frmTipoTejido.aspx">Tipo Tejido</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Pedidos </a>
+                            <div class="dropdown-menu p-3" style="min-width: 420px;">
+                                <a class="dropdown-item" href="frmPedido.aspx">Pedido</a>
+                                <a class="dropdown-item" href="frmEstadoPedido.aspx">Estado Pedido</a>
+                                <a class="dropdown-item" href="frmHistorialEstado.aspx">Historial Estado</a>
+                                <a class="dropdown-item" href="frmDocumentoPedido.aspx">Documento Pedido</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Compras </a>
                             <div class="dropdown-menu p-3" style="min-width: 420px;">
                                 <div class="row">
                                     <div class="col-6">
-                                        <a class="dropdown-item" href="frmCliente.aspx">Cliente</a>
-                                        <a class="dropdown-item" href="#">moneda</a>
-                                        <a class="dropdown-item" href="#">tipodocumento</a>
-                                        <a class="dropdown-item" href="#">almacen</a>
-                                        <a class="dropdown-item" href="#">unidad medida</a>
-                                        <a class="dropdown-item" href="#">operario</a>
-                                    </div>
-
-                                    <div class="col-6">
-                                        <a class="dropdown-item" href="#">turno</a>
-                                        <a class="dropdown-item" href="#">usuario</a>
-                                        <a class="dropdown-item" href="#">permiso</a>
-                                        <a class="dropdown-item" href="#">rol permiso</a>
-                                        <a class="dropdown-item" href="#">tipohilo</a>
-                                        <a class="dropdown-item" href="#">tipotejido</a>
+                                        <a class="dropdown-item" href="frmCompraProveedor.aspx">Compra Proveedor</a>
+                                        <a class="dropdown-item" href="frmPagoProveedor.aspx">Pago Proveedor</a>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> PEDIDO </a>
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Producción </a>
                             <div class="dropdown-menu p-3" style="min-width: 420px;">
                                 <div class="row">
                                     <div class="col-6">
-                                        <a class="dropdown-item" href="#">pedido </a>
-                                        <a class="dropdown-item" href="#">detalle pedido </a>
-                                        <a class="dropdown-item" href="#">estadopedido</a>
-                                        <a class="dropdown-item" href="#">historial estado pedido</a>
+                                        <a class="dropdown-item" href="frmProduccion.aspx">Producción</a>
+                                        <a class="dropdown-item" href="frmIngresoHilo.aspx">Ingreso Hilo</a>
+                                        <a class="dropdown-item" href="frmSalidaHilo.aspx">Salida Hilo</a>
+                                        <a class="dropdown-item" href="frmMaquina.aspx">Máquina</a>
+                                        <a class="dropdown-item" href="frmMantenimientoMaquina.aspx">Mantenimiento Máquina</a>
+                                        <a class="dropdown-item" href="frmAsistenciaOperario.aspx">Asistencia Operario</a>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> PROVEEDOR </a>
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Despacho </a>
                             <div class="dropdown-menu p-3" style="min-width: 420px;">
                                 <div class="row">
                                     <div class="col-6">
-                                        <a class="dropdown-item" href="#">proveedor</a>
-                                        <a class="dropdown-item" href="#">compra proveedor </a>
-                                        <a class="dropdown-item" href="#">detalle compra proveedor </a>
+                                        <a class="dropdown-item" href="frmEntrega.aspx">Entrega</a>
+                                        <a class="dropdown-item" href="frmCobranzaPedido.aspx">Cobranza Pedido</a>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> INGRESO </a>
-                            <div class="dropdown-menu p-3" style="min-width: 420px;">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <a class="dropdown-item" href="#">ingresohilo </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> PRODUCCION </a>
-                            <div class="dropdown-menu p-3" style="min-width: 420px;">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <a class="dropdown-item" href="#">produccion </a>
-                                        <a class="dropdown-item" href="#">salida hilo</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> DESPACHO </a>
-                            <div class="dropdown-menu p-3" style="min-width: 420px;">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <a class="dropdown-item" href="#">entrega </a>
-                                        <a class="dropdown-item" href="#">documento pedido</a>
-                                        <a class="dropdown-item" href="#">historial estado pedido</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> PAGOS / COBRANZAS </a>
-                            <div class="dropdown-menu p-3" style="min-width: 420px;">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <a class="dropdown-item" href="#">pago proveedor </a>
-                                        <a class="dropdown-item" href="#">cobranza pedido</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">MANTENIMIENTO / ASISTENCIA </a>
-                            <div class="dropdown-menu p-3" style="min-width: 420px;">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <a class="dropdown-item" href="#">maquina</a>
-                                        <a class="dropdown-item" href="#">mantenimiento maquina</a>
-                                        <a class="dropdown-item" href="#">asistencia operario</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-
                     </ul>
                 </div>
             </div>

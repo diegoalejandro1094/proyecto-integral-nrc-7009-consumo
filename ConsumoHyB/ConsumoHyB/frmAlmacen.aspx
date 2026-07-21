@@ -1,16 +1,15 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frmAlmacen.aspx.cs" Inherits="ConsumoHyB.frmAlmacen" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frmAlmacen.aspx.cs" Inherits="ConsumoHyB.frmAlmacen" MasterPageFile="~/Site1.Master" %>
 
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta charset="utf-8" />
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Mantenimiento de Almacen</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
-</head>
-<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+</asp:Content>
+
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
         <h1>Mantenimiento de Almacen</h1>
-        <form id="form1" runat="server">
+
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
@@ -41,13 +40,17 @@
                             <asp:BoundField DataField="codigo" HeaderText="Codigo" />
                             <asp:BoundField DataField="nombre" HeaderText="Nombre" />
                             <asp:BoundField DataField="direccion" HeaderText="Direccion" />
-                            <asp:TemplateField HeaderText="Estado"><ItemTemplate><%# Convert.ToBoolean(Eval("estado")) ? "Habilitado" : "Deshabilitado" %></ItemTemplate></asp:TemplateField>
+                            <asp:TemplateField HeaderText="Estado">
+                                <ItemTemplate><%# Convert.ToBoolean(Eval("estado")) ? "Habilitado" : "Deshabilitado" %></ItemTemplate>
+                            </asp:TemplateField>
                             <asp:ButtonField Text="Seleccionar" CommandName="Seleccionar" />
                         </Columns>
                     </asp:GridView>
                 </ContentTemplate>
             </asp:UpdatePanel>
-        </form>
+
     </div>
-</body>
-</html>
+
+</asp:Content>
+
+
