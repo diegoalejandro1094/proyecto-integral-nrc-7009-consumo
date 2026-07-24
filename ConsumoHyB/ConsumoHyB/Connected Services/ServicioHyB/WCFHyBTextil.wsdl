@@ -7,6 +7,12 @@
       <xsd:import schemaLocation="http://localhost:53544/WCFHyBTextil.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/pe.com.hyb.bo" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IWCFHyBTextil_ActualizarEntrega_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarEntrega" />
+  </wsdl:message>
+  <wsdl:message name="IWCFHyBTextil_ActualizarEntrega_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarEntregaResponse" />
+  </wsdl:message>
   <wsdl:message name="IWCFHyBTextil_EliminarEntrega_InputMessage">
     <wsdl:part name="parameters" element="tns:EliminarEntrega" />
   </wsdl:message>
@@ -391,6 +397,12 @@
   <wsdl:message name="IWCFHyBTextil_HabilitarUsuario_OutputMessage">
     <wsdl:part name="parameters" element="tns:HabilitarUsuarioResponse" />
   </wsdl:message>
+  <wsdl:message name="IWCFHyBTextil_LoginUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IWCFHyBTextil_LoginUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginUsuarioResponse" />
+  </wsdl:message>
   <wsdl:message name="IWCFHyBTextil_MostrarRolPermiso_InputMessage">
     <wsdl:part name="parameters" element="tns:MostrarRolPermiso" />
   </wsdl:message>
@@ -774,12 +786,6 @@
   </wsdl:message>
   <wsdl:message name="IWCFHyBTextil_RegistrarEntrega_OutputMessage">
     <wsdl:part name="parameters" element="tns:RegistrarEntregaResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWCFHyBTextil_ActualizarEntrega_InputMessage">
-    <wsdl:part name="parameters" element="tns:ActualizarEntrega" />
-  </wsdl:message>
-  <wsdl:message name="IWCFHyBTextil_ActualizarEntrega_OutputMessage">
-    <wsdl:part name="parameters" element="tns:ActualizarEntregaResponse" />
   </wsdl:message>
   <wsdl:message name="IWCFHyBTextil_MostrarRol_InputMessage">
     <wsdl:part name="parameters" element="tns:MostrarRol" />
@@ -1292,6 +1298,10 @@
     <wsdl:part name="parameters" element="tns:MostrarTurnoResponse" />
   </wsdl:message>
   <wsdl:portType name="IWCFHyBTextil">
+    <wsdl:operation name="ActualizarEntrega">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFHyBTextil/ActualizarEntrega" message="tns:IWCFHyBTextil_ActualizarEntrega_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFHyBTextil/ActualizarEntregaResponse" message="tns:IWCFHyBTextil_ActualizarEntrega_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="EliminarEntrega">
       <wsdl:input wsaw:Action="http://tempuri.org/IWCFHyBTextil/EliminarEntrega" message="tns:IWCFHyBTextil_EliminarEntrega_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IWCFHyBTextil/EliminarEntregaResponse" message="tns:IWCFHyBTextil_EliminarEntrega_OutputMessage" />
@@ -1548,6 +1558,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IWCFHyBTextil/HabilitarUsuario" message="tns:IWCFHyBTextil_HabilitarUsuario_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IWCFHyBTextil/HabilitarUsuarioResponse" message="tns:IWCFHyBTextil_HabilitarUsuario_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="LoginUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWCFHyBTextil/LoginUsuario" message="tns:IWCFHyBTextil_LoginUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWCFHyBTextil/LoginUsuarioResponse" message="tns:IWCFHyBTextil_LoginUsuario_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="MostrarRolPermiso">
       <wsdl:input wsaw:Action="http://tempuri.org/IWCFHyBTextil/MostrarRolPermiso" message="tns:IWCFHyBTextil_MostrarRolPermiso_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IWCFHyBTextil/MostrarRolPermisoResponse" message="tns:IWCFHyBTextil_MostrarRolPermiso_OutputMessage" />
@@ -1803,10 +1817,6 @@
     <wsdl:operation name="RegistrarEntrega">
       <wsdl:input wsaw:Action="http://tempuri.org/IWCFHyBTextil/RegistrarEntrega" message="tns:IWCFHyBTextil_RegistrarEntrega_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IWCFHyBTextil/RegistrarEntregaResponse" message="tns:IWCFHyBTextil_RegistrarEntrega_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="ActualizarEntrega">
-      <wsdl:input wsaw:Action="http://tempuri.org/IWCFHyBTextil/ActualizarEntrega" message="tns:IWCFHyBTextil_ActualizarEntrega_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IWCFHyBTextil/ActualizarEntregaResponse" message="tns:IWCFHyBTextil_ActualizarEntrega_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="MostrarRol">
       <wsdl:input wsaw:Action="http://tempuri.org/IWCFHyBTextil/MostrarRol" message="tns:IWCFHyBTextil_MostrarRol_InputMessage" />
@@ -2151,6 +2161,15 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IWCFHyBTextil" type="tns:IWCFHyBTextil">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ActualizarEntrega">
+      <soap:operation soapAction="http://tempuri.org/IWCFHyBTextil/ActualizarEntrega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="EliminarEntrega">
       <soap:operation soapAction="http://tempuri.org/IWCFHyBTextil/EliminarEntrega" style="document" />
       <wsdl:input>
@@ -2727,6 +2746,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="LoginUsuario">
+      <soap:operation soapAction="http://tempuri.org/IWCFHyBTextil/LoginUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="MostrarRolPermiso">
       <soap:operation soapAction="http://tempuri.org/IWCFHyBTextil/MostrarRolPermiso" style="document" />
       <wsdl:input>
@@ -3296,15 +3324,6 @@
     </wsdl:operation>
     <wsdl:operation name="RegistrarEntrega">
       <soap:operation soapAction="http://tempuri.org/IWCFHyBTextil/RegistrarEntrega" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ActualizarEntrega">
-      <soap:operation soapAction="http://tempuri.org/IWCFHyBTextil/ActualizarEntrega" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
