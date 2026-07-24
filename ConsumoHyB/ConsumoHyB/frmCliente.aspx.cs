@@ -91,13 +91,13 @@ namespace ConsumoHyB
             {
                 int i = Convert.ToInt32(e.CommandArgument);
                 GridViewRow f = gvCliente.Rows[i];
-                txtCod.Text = f.Cells[0].Text;
-                txtRuc.Text = f.Cells[1].Text;
-                txtRazonSocial.Text = f.Cells[2].Text;
-                txtNombreContacto.Text = f.Cells[3].Text;
-                txtTelefono.Text = f.Cells[4].Text;
-                txtEmail.Text = f.Cells[5].Text;
-                txtDireccion.Text = f.Cells[6].Text;
+                txtCod.Text = Server.HtmlDecode(f.Cells[0].Text);
+                txtRuc.Text = Server.HtmlDecode(f.Cells[1].Text);
+                txtRazonSocial.Text = Server.HtmlDecode(f.Cells[2].Text);
+                txtNombreContacto.Text = Server.HtmlDecode(f.Cells[3].Text);
+                txtTelefono.Text = Server.HtmlDecode(f.Cells[4].Text);
+                txtEmail.Text = Server.HtmlDecode(f.Cells[5].Text);
+                txtDireccion.Text = Server.HtmlDecode(f.Cells[6].Text);
                 string est = ((f.Cells[7].Controls[0] as DataBoundLiteralControl).Text).Trim();
                 chkEstado.Checked = est.Equals("Habilitado");
             }
